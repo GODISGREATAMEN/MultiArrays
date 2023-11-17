@@ -13,7 +13,7 @@ public class Main {
                 {21, 34, 51, 8},
                 {49, 91, 27, 76}};
 
-        System.out.println("Hi!\nEnter the number you expect to be the winning one:");
+        System.out.println("Hi!\nEnter the number from 0 to 100 you expect to be the winning one:");
 
         if (scan.hasNextInt()) {
             userNumber = scan.nextInt();
