@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        final int WINNING_NUMBER = 34;
         Scanner scan = new Scanner(System.in);
         int userNumber;
         boolean isWinner = false;
@@ -19,14 +20,15 @@ public class Main {
             userNumber = scan.nextInt();
             for (int i = 0; i < lotteryNumbers.length && !isWinner; i++) {
                 for (int j = 0; j < lotteryNumbers[i].length; j++) {
-                    if (userNumber == lotteryNumbers[i][j]) {
+                    if (userNumber == WINNING_NUMBER) {
                         isWinner = true;
                         break;
                     }
                 }
             }
             if (!isWinner) {
-                System.out.println("Unfortunately, you lost!\n");
+                System.out.println("Unfortunately, you lost!");
+                System.out.println("The winning number was: " + WINNING_NUMBER + "\n");
             } else {
                 System.out.println("You're lucky today!!!\n");
             }
